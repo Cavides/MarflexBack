@@ -16,8 +16,8 @@ function getAllProducts(){
     return Products.find({});
 }
 
-function getProducts(id){
-    return Products.findById(id);
+function getProduct(_id){
+    return Products.findById(_id);
 }
 
 module.exports ={
@@ -25,5 +25,5 @@ module.exports ={
     deleteProducts,
     updateProducts,
     getAllProducts,
-    getProducts,
+    getProduct,
 };

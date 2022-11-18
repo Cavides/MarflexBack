@@ -2,7 +2,7 @@ const {
     createProducts,
     updateProducts,
     deleteProducts,
-    getProducts,
+    getProduct,
     getAllProducts,
 } = require("./products_services");
 
@@ -11,10 +11,10 @@ async function getAllProductsHandler(req,res) {
     return res.status(200).json(Products);
 }
 
-async function getProductsHandler(req, res){
-    const {id} = req.params;
+async function getProductHandler(req, res){
+    const {_id} = req.params;
     try {
-        const Products = await getProducts(id);;
+        const Products = await getProducts(_id);;
         return res.status(200).json(Products);
     }catch(error) {
         console.error(error);
@@ -65,7 +65,7 @@ async function deleteProductsHandler(req, res) {
 
 module.exports = {
     getAllProductsHandler,
-    getProductsHandler,
+    getProductHandler,
     createProductsHandler,
     deleteProductsHandler,
     updateProductsHandler,

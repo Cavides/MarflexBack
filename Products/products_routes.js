@@ -2,7 +2,7 @@ const express = require("express");
 
 const {
   getAllProductsHandler,
-  getProductsHandler,
+  getProductHandler,
   createProductsHandler,
   deleteProductsHandler,
   updateProductsHandler,
@@ -14,7 +14,7 @@ const router = new express.Router();
 
 router.get("/", getAllProductsHandler);
 
-router.get("/:_id", getProductsHandler);
+router.get("/:_id", getProductHandler);
 
 router.post("/", createProductsHandler);
 
