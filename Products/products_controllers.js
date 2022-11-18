@@ -14,7 +14,7 @@ async function getAllProductsHandler(req,res) {
 async function getProductHandler(req, res){
     const {id} = req.params;
     try {
-        const Products = await getProducts(id);;
+        const Products = await getProduct(id);;
         return res.status(200).json(Products);
     }catch(error) {
         console.error(error);
