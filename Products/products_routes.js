@@ -14,11 +14,11 @@ const router = new express.Router();
 
 router.get("/", getAllProductsHandler);
 
-router.get("/:id", getProductsHandler);
+router.get("/:_id", getProductsHandler);
 
 router.post("/", createProductsHandler);
 
-router.patch("/:id ", updateProductsHandler);
+router.patch("/:_id ", updateProductsHandler);
 
 router.delete("/", deleteProductsHandler);
 
