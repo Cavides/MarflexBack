@@ -34,7 +34,7 @@ app.use('/auth/local', authLocal);
 
 const  port =process.env.PORT || 5000;
 
-const MURI = process.env.MONGO_URI;
+const MURI = process.env.mongouri;
 
 
 
