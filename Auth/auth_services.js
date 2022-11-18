@@ -3,11 +3,11 @@ const jwt = require('jsonwebtoken');
 const { getUserByEmail } = require('../Users/user_services');
 
 
-const { KEY } = process.env;
+const { key } = process.env;
 
 async function verifyToken(token) {
   try {
-    const payload = await jwt.verify(token, KEY);
+    const payload = await jwt.verify(token, key);
     return payload;
   } catch (e) {
     return null;
@@ -15,7 +15,7 @@ async function verifyToken(token) {
 }
 
 async function signToken(payload) {
-  const token = await jwt.sign(payload, KEY, { expiresIn: '3h' });
+  const token = await jwt.sign(payload, key, { expiresIn: '3h' });
   return token;
 }
 
