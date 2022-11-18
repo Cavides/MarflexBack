@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const { sendMailSendGrid } = require('../../utils/mail');
+const { sendMailSendGrid } = require('../../Utils/mail');
 
 const {
   getUserByEmail,
