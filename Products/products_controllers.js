@@ -4,7 +4,7 @@ const {
     deleteProducts,
     getProducts,
     getAllProducts,
-} = require("./Products_services");
+} = require("./products_services");
 
 async function getAllProductsHandler(req,res) {
     const Products = await getAllProducts();

@@ -6,7 +6,7 @@ const {
   createProductsHandler,
   deleteProductsHandler,
   updateProductsHandler,
-} = require("./Products_controllers");
+} = require("./products_controllers");
 
 const { isAuthenticated } = require("../Auth/auth_services");
 
