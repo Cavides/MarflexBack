@@ -9,7 +9,7 @@ const user = require('./Users/user_routes');
 const pedido = require('./Pedidos/pedidos_routes');
 const factura = require('./Facturacion/facturacion_routes');
 const producto = require("./Products/products_routes");
-const authLocal = require('./auth/local/local_routes');
+const authLocal = require('./Auth/Local/local_routes');
 
 app.use(express.json());
 app.use(cors());
