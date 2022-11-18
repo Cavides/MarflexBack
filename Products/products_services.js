@@ -16,8 +16,8 @@ function getAllProducts(){
     return Products.find({});
 }
 
-function getProduct(_id){
-    return Products.findById(_id);
+function getProduct(id){
+    return Products.findById(id);
 }
 
 module.exports ={

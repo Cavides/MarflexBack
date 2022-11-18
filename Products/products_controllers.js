@@ -12,9 +12,9 @@ async function getAllProductsHandler(req,res) {
 }
 
 async function getProductHandler(req, res){
-    const {_id} = req.params;
+    const {id} = req.params;
     try {
-        const Products = await getProducts(_id);;
+        const Products = await getProducts(id);;
         return res.status(200).json(Products);
     }catch(error) {
         console.error(error);
@@ -53,7 +53,7 @@ async function deleteProductsHandler(req, res) {
     try {
       await updateProducts(id, ProductsUpdate);
       const Products = await findOne(id);
-      console.log("Product id:", _id, "Data updated:", ProductsUpdate);
+      console.log("Product id:", id, "Data updated:", ProductsUpdate);
       return res
         .status(200)
         .json({ message: "Product updated", profile: Products.profile });
