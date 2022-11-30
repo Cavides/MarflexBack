@@ -8,12 +8,12 @@ const {
   } = require("./pedidos_services");
 
   async function createPedidoHandler(req,res){
-      const {fechaPedido, numFactura,alamcen,nombreProducto, color, medida, especificacion, foto, fechaEntrega, asesor, proveedor,valorVenta} = req.body;
+      const {fechaPedido, numfactura,almacen,nombreProducto, color, medida, especificacion, foto, fechaEntrega, asesor, proveedor,valorVenta} = req.body;
       try{
-        const pedido = await createPedido({fechaPedido, numFactura,alamcen,nombreProducto, color, medida, especificacion, foto, fechaEntrega, asesor, proveedor,valorVenta});
+        const pedido = await createPedido({fechaPedido, numfactura,almacen,nombreProducto, color, medida, especificacion, foto, fechaEntrega, asesor, proveedor,valorVenta});
         return res.status(200).json({message:"Pedido registrado"});
       }catch(error){
-          return res.status(500).json({error});
+          return res.status(500).json({message:"Pedido no pudo ser registrado"});
       }
   }
 

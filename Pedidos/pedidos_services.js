@@ -1,15 +1,15 @@
 const Pedido = require("./pedidos_model");
 
-function createPedido(Pedido) {
-    return Pedido.create(Pedido);
+function createPedido(pedido) {
+    return Pedido.create(pedido);
   }
   
   function deletePedido(id) {
     return Pedido.findByIdAndDelete(id);
   }
   
-  function updatePedido(id, Pedido) {
-    return Pedido.findByIdAndUpdate(id, Pedido, { new: true });
+  function updatePedido(id, pedido) {
+    return Pedido.findByIdAndUpdate(id, pedido, { new: true });
   }
   
   function getAllPedidos() {
