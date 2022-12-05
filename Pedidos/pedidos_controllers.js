@@ -4,6 +4,7 @@ const {
     deletePedido,
     getPedido,
     getAllPedidos,
+    getPedidoByCode,
   
   } = require("./pedidos_services");
 
@@ -58,11 +59,28 @@ async function getAllPedidosHandler(req,res){
     return res.status(200).json(pedido); 
 }
 
+async function getPedidoByCodeHandler(req, res) {
+    const { numfactura } = req.params;
+    try {
+      const pedido = await getPedidoByCode(numfactura);
+  
+      if (!pedido) {
+        console.log('Code de pedido not found');
+        return res.status(404).json({ message: 'Code de Pedido not found' });
+      }
+      console.log('Showing user', pedido);
+      return res.json(user);
+    } catch (error) {
+      console.error(`[ERROR]: ${error}`);
+      return res.status(500).json({message:"No está funcionando" });
+    }
+  }
 
 module.exports = {
     createPedidoHandler,
     getPedidoHandler,
     updatePedidoHandler,
     deletePedidoHandler,
-    getAllPedidosHandler
+    getAllPedidosHandler,
+    getPedidoByCodeHandler,
   };

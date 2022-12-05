@@ -20,6 +20,10 @@ function createPedido(pedido) {
     return Pedido.findById(id);
   }
 
+  function getPedidoByCode(numfactura) {
+    return Pedido.findOne({numFactura:numfactura});
+  }
+
   
   module.exports = {
     createPedido,
@@ -27,4 +31,5 @@ function createPedido(pedido) {
     updatePedido,
     getAllPedidos,
     getPedido,
+    getPedidoByCode,
   };

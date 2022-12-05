@@ -6,7 +6,8 @@ const{
     getPedidoHandler,
     updatePedidoHandler,
     deletePedidoHandler,
-    getAllPedidosHandler
+    getAllPedidosHandler,
+    getPedidoByCodeHandler,
 } = require("./pedidos_controllers"); 
 
 const router = new express.Router(); 
@@ -20,5 +21,7 @@ router.post ("/", createPedidoHandler);
 router.get("/", updatePedidoHandler); 
 
 router.get("/", deletePedidoHandler); 
+
+router.get('/numfactura/:numfactura', getPedidoByCodeHandler);
 
 module.exports = router;
