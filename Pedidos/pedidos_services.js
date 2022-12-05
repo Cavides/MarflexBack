@@ -21,7 +21,7 @@ function createPedido(pedido) {
   }
 
   function getPedidoByCode(numfactura) {
-    return Pedido.findOne({numFactura:numfactura});
+    return Pedido.findOne({numfactura:numfactura});
   }
 
   
