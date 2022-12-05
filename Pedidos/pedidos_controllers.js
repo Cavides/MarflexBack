@@ -63,7 +63,6 @@ async function getPedidoByCodeHandler(req, res) {
     const { numfactura } = req.params;
     try {
       const pedido = await getPedidoByCode(numfactura);
-  
       if (!pedido) {
         console.log('Code de pedido not found');
         return res.status(404).json({ message: 'Code de Pedido not found' });
