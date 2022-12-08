@@ -18,9 +18,9 @@ router.get ("/:id", getPedidoHandler);
 
 router.post ("/", createPedidoHandler); 
 
-router.get("/", updatePedidoHandler); 
+router.patch("/", updatePedidoHandler); 
 
-router.get("/", deletePedidoHandler); 
+router.delete("/:id", deletePedidoHandler); 
 
 router.get('/numfactura/:numfactura', getPedidoByCodeHandler);
 

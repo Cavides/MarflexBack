@@ -52,7 +52,10 @@ const pedidoSchema = new Schema(
             type: Number,
             required: true,
         }
-    }
+    },
+    {
+        timestamps: true,
+      }
 )
 
 const Pedido = model("Pedido",pedidoSchema);
