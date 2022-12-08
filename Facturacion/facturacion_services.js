@@ -8,17 +8,13 @@ function getAllFacturas(){
     return Factura.find({});
 }
 
-function getFactura(id){
-    return Factura.findById(id)
+function getFactura(_id){
+    return Factura.findById(_id)
 }
 
-function deleteFactura(id){
-    return Factura.findByIdAndDelete(id);
-}
 
 module.exports = {
     createFactura,
     getAllFacturas,
     getFactura,
-    deleteFactura,
 };

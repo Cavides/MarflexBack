@@ -2,7 +2,6 @@ const {
     createFactura,
     getAllFacturas,
     getFactura,
-    deleteFactura,
 } = require("./facturacion_services");
 
 async function getAllFacturasHandler(req, res){
@@ -11,9 +10,9 @@ async function getAllFacturasHandler(req, res){
 }
 
 async function getFacturaHandler(req, res) {
-    const {id} = req.params;
+    const {_id} = req.params;
     try{
-        const factura = await getFactura(id);
+        const factura = await getFactura(_id);
         return res.status(200).json(user);
     }catch(error){
         console.error(error);
@@ -32,21 +31,9 @@ async function createFacturaHandler(req, res){
     }
 }
 
-async function deleteFacturaHandler(req, res) {
-    const { id } = req.factura;
-    try {
-        await deleteFactura(id);
-        console.log(`Factura ${id} eliminated`);
-        return res.status(200).json({ message: " Factura Elminated"});
-    } catch(error){
-        console.error(`[ERROR]: ${error}`);
-        return res.status(500).json({error});
-    }
-}
 
 module.exports = {
     getAllFacturasHandler,
     getFacturaHandler,
     createFacturaHandler,
-    deleteFacturaHandler,
 };
