@@ -18,7 +18,7 @@ router.get ("/:id", getPedidoHandler);
 
 router.post ("/", createPedidoHandler); 
 
-router.patch("/", updatePedidoHandler); 
+router.patch("/:id", updatePedidoHandler); 
 
 router.delete("/:id", deletePedidoHandler); 
 
