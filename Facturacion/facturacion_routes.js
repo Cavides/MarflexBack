@@ -6,7 +6,7 @@ const router = new express.Router();
 
 router.get('/', getAllFacturasHandler);
 
-router.get('/:_id', getFacturaHandler);
+router.get('/:id', getFacturaHandler);
 
 router.post('/', createFacturaHandler);
 

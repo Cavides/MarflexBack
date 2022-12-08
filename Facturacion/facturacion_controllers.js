@@ -10,10 +10,10 @@ async function getAllFacturasHandler(req, res){
 }
 
 async function getFacturaHandler(req, res) {
-    const {_id} = req.params;
+    const { id } = req.params;
     try{
-        const factura = await getFactura(_id);
-        return res.status(200).json(user);
+        const factura = await getFactura(id);
+        return res.status(200).json(factura);
     }catch(error){
         console.error(error);
         return res.status(500).json({message:"Error, Factura no encontrada" })
