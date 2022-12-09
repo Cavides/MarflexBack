@@ -37,7 +37,7 @@ const pedidoSchema = new Schema(
             required: true,
         },
         fechaEntrega:{
-            type: String,
+            type: Date,
             required: true,
         },
         asesor:{
