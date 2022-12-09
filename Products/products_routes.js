@@ -6,6 +6,7 @@ const {
   createProductsHandler,
   deleteProductsHandler,
   updateProductsHandler,
+  getProductByCodeHandler,
 } = require("./products_controllers");
 
 const { isAuthenticated } = require("../Auth/auth_services");
@@ -21,5 +22,7 @@ router.post("/", createProductsHandler);
 router.patch("/:id ", updateProductsHandler);
 
 router.delete("/", deleteProductsHandler);
+
+router.get("/code/:code", getProductByCodeHandler);
 
 module.exports = router;

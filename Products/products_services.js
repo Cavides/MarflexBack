@@ -20,10 +20,15 @@ function getProduct(id){
     return Products.findById(id);
 }
 
+function getProductByCode(code){
+    return Products.findOne({ code : code});
+}
+
 module.exports ={
     createProducts,
     deleteProducts,
     updateProducts,
     getAllProducts,
     getProduct,
+    getProductByCode,
 };

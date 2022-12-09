@@ -4,6 +4,7 @@ const {
     deleteProducts,
     getProduct,
     getAllProducts,
+    getProductByCode,
 } = require("./products_services");
 
 async function getAllProductsHandler(req,res) {
@@ -63,10 +64,28 @@ async function deleteProductsHandler(req, res) {
     }
   }
 
+  async function getProductByCodeHandler(req, res) {
+    const { code } = req.params;
+    try {
+      const product = await getProductByCode(code);
+  
+      if (!product) {
+        console.log('Code not found');
+        return res.status(404).json({ message: 'Email not found' });
+      }
+      console.log('Showing product', product);
+      return res.json(product);
+    } catch (error) {
+      console.error(`[ERROR]: ${error}`);
+      return res.status(500).json({message:"No está funcionando" });
+    }
+  }
+
 module.exports = {
     getAllProductsHandler,
     getProductHandler,
     createProductsHandler,
     deleteProductsHandler,
     updateProductsHandler,
+    getProductByCodeHandler
 };
