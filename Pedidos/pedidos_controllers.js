@@ -68,7 +68,7 @@ async function getPedidoByCodeHandler(req, res) {
         return res.status(404).json({ message: 'Code de Pedido not found' });
       }
       console.log('Showing user', pedido);
-      return res.json(user);
+      return res.json(pedido);
     } catch (error) {
       console.error(`[ERROR]: ${error}`);
       return res.status(500).json({message:"No está funcionando" });
