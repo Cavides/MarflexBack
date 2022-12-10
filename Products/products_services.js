@@ -9,7 +9,7 @@ function deleteProducts(id){
 }
 
 function updateProducts(id, products){
-    return Products.findByIdAndUpdate(id, products, {new: true});
+    return Products.findByIdAndUpdate(id, products, { new: true});
 }
 
 function getAllProducts(){
