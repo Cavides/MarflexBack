@@ -44,14 +44,10 @@ const facturaScheme = new Schema(
             type: Date,
             required: true,
         },
-        // product:{
-        //     type: Array,
-        //     required: true,
-        // },
-        // total:{
-        //     type: Number,
-        //     required: true,
-        // }
+        cart:{
+            type: Array,
+            required: true,
+        }
     },
     {
         timestamps: true,

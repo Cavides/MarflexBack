@@ -21,9 +21,9 @@ async function getFacturaHandler(req, res) {
 }
 
 async function createFacturaHandler(req, res){
-    const{ name, lastName, doc, email, telephone, departamento, ciudad, direccion, descripcion} = req.body;
+    const{ name, lastName, doc, email, telephone, departamento, ciudad, direccion, descripcion, cart} = req.body;
     try{
-    const factura = await createFactura({ name, lastName, doc, email, telephone, departamento, ciudad, direccion, descripcion});
+    const factura = await createFactura({ name, lastName, doc, email, telephone, departamento, ciudad, direccion, descripcion,cart});
     return res.status(200).json(factura);
     }catch(error){
         console.error(error);
