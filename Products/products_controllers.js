@@ -53,7 +53,6 @@ async function deleteProductsHandler(req, res) {
   
     try {
       await updateProducts(id, productsUpdate);
-      const Products = await findOne(id);
       console.log("Product id:", id, "Data updated:", productsUpdate);
       return res
         .status(200)

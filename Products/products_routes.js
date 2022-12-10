@@ -19,7 +19,7 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductsHandler);
 
-router.patch("/:id ", updateProductsHandler);
+router.patch("/:id ",updateProductsHandler);
 
 router.delete("/:id", deleteProductsHandler);
 
