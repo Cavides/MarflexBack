@@ -5,7 +5,7 @@ function createProduct(product) {
 }
 
 function deleteProduct(id){
-    return Product.findByIdAndDelete(id);
+    return Products.findByIdAndDelete(id);
 }
 
 function updateProduct(id, product){

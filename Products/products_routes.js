@@ -18,7 +18,7 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductHandler);
 
-router.patch("/:id ", updateProductHandler);
+router.put("/:id ", updateProductHandler);
 
 router.delete("/:id", deleteProductHandler);
 
