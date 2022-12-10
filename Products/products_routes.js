@@ -18,7 +18,7 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductHandler);
 
-router.patch("/:id", (req, res)=>{
+router.patch("/:id ", (req, res)=>{
   return res.status(200).json({message:"Piola"});
 });
 
