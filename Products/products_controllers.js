@@ -53,9 +53,7 @@ async function deleteProductsHandler(req, res) {
     try {
       await updateProducts(id, productsUpdate);
       console.log("Product ${id} Data updated:");
-      return res
-        .status(200)
-        .json({ message: "Product updated"});
+      return res.status(200).json({ message: "Product updated"});
     } catch (error) {
       console.error(`[ERROR]: ${error}`);
       return res.status(500).json({ message: "Error updating product", error });

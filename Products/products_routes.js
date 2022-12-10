@@ -9,7 +9,6 @@ const {
   getProductByCodeHandler,
 } = require("./products_controllers");
 
-const { isAuthenticated } = require("../Auth/auth_services");
 
 const router = new express.Router();
 
@@ -19,7 +18,7 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductsHandler);
 
-router.patch("/:id ",updateProductsHandler);
+router.patch("/:id ", updateProductsHandler);
 
 router.delete("/:id", deleteProductsHandler);
 
