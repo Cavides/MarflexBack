@@ -21,7 +21,7 @@ router.post("/", createProductsHandler);
 
 router.patch("/:id ", updateProductsHandler);
 
-router.delete("/", deleteProductsHandler);
+router.delete("/:id", deleteProductsHandler);
 
 router.get("/code/:code", getProductByCodeHandler);
 
