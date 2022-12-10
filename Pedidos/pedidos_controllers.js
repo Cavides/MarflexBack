@@ -32,7 +32,7 @@ const {
 
 async function updatePedidoHandler(req,res){
     const pedidoUpdate =req.body;
-    const{id} =req.pedido; 
+    const{id} =req.params; 
     try{
         await updatePedido(id, pedidoUpdate); 
         return res.status(200).json({ message: "pedido updated"});
@@ -43,7 +43,7 @@ async function updatePedidoHandler(req,res){
 }
 
 async function deletePedidoHandler(req,res){
-    const {id} =req.pedido;
+    const {id} =req.params;
     try{
         await deletePedido(id);
         console.log(`pedido ${id} eliminate`);
