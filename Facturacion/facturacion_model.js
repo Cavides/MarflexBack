@@ -40,10 +40,6 @@ const facturaScheme = new Schema(
             type: String,
             require: false,
         },
-        date:{
-            type: Date,
-            required: true,
-        },
         cart:{
             type: Array,
             required: true,
