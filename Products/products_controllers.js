@@ -57,7 +57,7 @@ async function deleteProductsHandler(req, res) {
       console.log("Product id:", id, "Data updated:", ProductsUpdate);
       return res
         .status(200)
-        .json({ message: "Product updated", profile: Products.profile });
+        .json({ message: "Product updated"});
     } catch (error) {
       console.error(`[ERROR]: ${error}`);
       return res.status(500).json({ message: "Error updating product", error });
