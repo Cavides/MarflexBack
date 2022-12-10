@@ -48,13 +48,13 @@ async function deleteProductsHandler(req, res) {
   }
 
   async function updateProductsHandler(req, res) {
-    const ProductsUpdate = req.body;
+    const productsUpdate = req.body;
     const { id } = req.params;
   
     try {
-      await updateProducts(id, ProductsUpdate);
+      await updateProducts(id, productsUpdate);
       const Products = await findOne(id);
-      console.log("Product id:", id, "Data updated:", ProductsUpdate);
+      console.log("Product id:", id, "Data updated:", productsUpdate);
       return res
         .status(200)
         .json({ message: "Product updated"});
