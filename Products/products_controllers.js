@@ -48,11 +48,10 @@ async function deleteProductsHandler(req, res) {
   }
 
   async function updateProductsHandler(req, res) {
-    const productsUpdate=req.body;
+    const productUpdate=req.body;
     const {id}=req.params;
     try {
-      await updateProducts(id, productsUpdate);
-      console.log("Product ${id} Data updated:");
+      await updateProducts(id, productUpdate);
       return res.status(200).json({ message: "Product updated"});
     } catch (error) {
       console.error(`[ERROR]: ${error}`);
