@@ -35,7 +35,7 @@ async function createProductsHandler(req, res){
 }
 
 async function deleteProductsHandler(req, res) {
-    const { id } = req.product;
+    const { id } = req.params;
   
     try {
       await deleteProducts(id);
@@ -49,7 +49,7 @@ async function deleteProductsHandler(req, res) {
 
   async function updateProductsHandler(req, res) {
     const ProductsUpdate = req.body;
-    const { id } = req.product;
+    const { id } = req.params;
   
     try {
       await updateProducts(id, ProductsUpdate);
