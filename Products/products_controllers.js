@@ -1,7 +1,7 @@
 const {
-    createProducts,
-    updateProducts,
-    deleteProducts,
+    createProduct,
+    updateProduct,
+    deleteProduct,
     getProduct,
     getAllProducts,
     getProductByCode,
@@ -23,10 +23,10 @@ async function getProductHandler(req, res){
     }
 }
 
-async function createProductsHandler(req, res){
+async function createProductHandler(req, res){
     const {code, title, type, category, desc, descripcion, price, medidas, material, garantia, armado, recomendaciones, imagen} = req.body;
     try{
-        const Products = await createProducts({code, title, type, category, desc, descripcion, price, medidas, material, garantia, armado, recomendaciones, imagen});
+        const Products = await createProduct({code, title, type, category, desc, descripcion, price, medidas, material, garantia, armado, recomendaciones, imagen});
         return res.status(200).json(Products);
     }catch(error) {
         console.error(error);
@@ -34,11 +34,11 @@ async function createProductsHandler(req, res){
     }
 }
 
-async function deleteProductsHandler(req, res) {
+async function deleteProductHandler(req, res) {
     const { id } = req.params;
   
     try {
-      await deleteProducts(id);
+      await deleteProduct(id);
       console.log(`Product ${id} eliminated`);
       return res.status(200).json({ message: "Product eliminated" });
     } catch (error) {
@@ -47,11 +47,11 @@ async function deleteProductsHandler(req, res) {
     }
   }
 
-  async function updateProductsHandler(req, res) {
+  async function updateProductHandler(req, res) {
     const productUpdate=req.body;
     const {id}=req.params;
     try {
-      await updateProducts(id, productUpdate);
+      await updateProduct(id, productUpdate);
       return res.status(200).json({ message: "Product updated"});
     } catch (error) {
       console.error(`[ERROR]: ${error}`);
@@ -79,8 +79,8 @@ async function deleteProductsHandler(req, res) {
 module.exports = {
     getAllProductsHandler,
     getProductHandler,
-    createProductsHandler,
-    deleteProductsHandler,
-    updateProductsHandler,
+    createProductHandler,
+    deleteProductHandler,
+    updateProductHandler,
     getProductByCodeHandler
 };

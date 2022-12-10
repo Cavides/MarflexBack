@@ -1,15 +1,15 @@
 const Products = require("./products_model");
 
-function createProducts(products) {
-    return Products.create(products);
+function createProduct(product) {
+    return Products.create(product);
 }
 
-function deleteProducts(id){
-    return Products.findByIdAndDelete(id);
+function deleteProduct(id){
+    return Product.findByIdAndDelete(id);
 }
 
-function updateProducts(id, products){
-    return Products.findByIdAndUpdate(id, products, { new: true});
+function updateProduct(id, product){
+    return Products.findByIdAndUpdate(id, product, { new: true});
 }
 
 function getAllProducts(){
@@ -25,9 +25,9 @@ function getProductByCode(code){
 }
 
 module.exports ={
-    createProducts,
-    deleteProducts,
-    updateProducts,
+    createProduct,
+    deleteProduct,
+    updateProduct,
     getAllProducts,
     getProduct,
     getProductByCode,

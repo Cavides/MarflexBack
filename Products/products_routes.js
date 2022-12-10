@@ -3,9 +3,9 @@ const express = require("express");
 const {
   getAllProductsHandler,
   getProductHandler,
-  createProductsHandler,
-  deleteProductsHandler,
-  updateProductsHandler,
+  createProductHandler,
+  deleteProductHandler,
+  updateProductHandler,
   getProductByCodeHandler,
 } = require("./products_controllers");
 
@@ -16,11 +16,11 @@ router.get("/", getAllProductsHandler);
 
 router.get("/:id", getProductHandler);
 
-router.post("/", createProductsHandler);
+router.post("/", createProductHandler);
 
-router.patch("/:id ", updateProductsHandler);
+router.patch("/:id ", updateProductHandler);
 
-router.delete("/:id", deleteProductsHandler);
+router.delete("/:id", deleteProductHandler);
 
 router.get("/code/:code", getProductByCodeHandler);
 
