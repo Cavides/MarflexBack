@@ -18,7 +18,9 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductHandler);
 
-// router.put("/:id ", updateProductHandler);
+router.patch("/:id ", (req, res)=>{
+  return res.status(200).json({message:"Piola"});
+});
 
 router.delete("/:id", deleteProductHandler);
 

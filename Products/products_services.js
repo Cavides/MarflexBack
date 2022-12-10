@@ -12,6 +12,7 @@ function deleteProduct(id){
 //     return Products.findByIdAndUpdate(id, product, { new: true});
 // }
 
+
 function getAllProducts(){
     return Products.find({});
 }
