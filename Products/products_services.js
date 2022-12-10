@@ -8,9 +8,9 @@ function deleteProduct(id){
     return Products.findByIdAndDelete(id);
 }
 
-function updateProduct(id, product){
-    return Products.findByIdAndUpdate(id, product, { new: true});
-}
+// function updateProduct(id, product){
+//     return Products.findByIdAndUpdate(id, product, { new: true});
+// }
 
 function getAllProducts(){
     return Products.find({});
@@ -27,7 +27,7 @@ function getProductByCode(code){
 module.exports ={
     createProduct,
     deleteProduct,
-    updateProduct,
+    // updateProduct,
     getAllProducts,
     getProduct,
     getProductByCode,

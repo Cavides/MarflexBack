@@ -5,7 +5,7 @@ const {
   getProductHandler,
   createProductHandler,
   deleteProductHandler,
-  updateProductHandler,
+  // updateProductHandler,
   getProductByCodeHandler,
 } = require("./products_controllers");
 
@@ -18,7 +18,7 @@ router.get("/:id", getProductHandler);
 
 router.post("/", createProductHandler);
 
-router.put("/:id ", updateProductHandler);
+// router.put("/:id ", updateProductHandler);
 
 router.delete("/:id", deleteProductHandler);
 
