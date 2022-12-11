@@ -78,7 +78,7 @@ userSchema.methods.comparePassword = async function comparepassword(
   }
 };
 
-UserSchema.virtual('profile').get(function profile() {
+userSchema.virtual('profile').get(function profile() {
   const {  name, lastName, email, avatar } = this;
 
   return {
