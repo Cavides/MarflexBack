@@ -78,6 +78,18 @@ userSchema.methods.comparePassword = async function comparepassword(
   }
 };
 
+UserSchema.virtual('profile').get(function profile() {
+  const {  name, lastName, email, avatar } = this;
+
+  return {
+    name,
+    lastName,
+    email,
+    avatar,
+  };
+});
+
+
 const User = model("User", userSchema);
 
 module.exports = User;
