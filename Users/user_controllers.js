@@ -80,7 +80,7 @@ async function updateUserHandler(req, res) {
     console.log("User id:", id, "Data updated:", userUpdate);
     return res
       .status(200)
-      .json({ message: "User updated", profile: user.profile });
+      .json({ message: "User updated" });
   } catch (error) {
     console.error(`[ERROR]: ${error}`);
     return res.status(500).json({ message: "Error updating user", error });
