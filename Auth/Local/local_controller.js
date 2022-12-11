@@ -149,7 +149,7 @@ async function loginUserHandler(req, res) {
     console.log('Successful login', user);
     return res.json({
       jwtoken,
-      profil: user.profile,
+      profile: user.profile,
       message: 'Welcome back!',
     });
   } catch (error) {
