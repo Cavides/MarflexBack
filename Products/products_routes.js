@@ -5,7 +5,7 @@ const {
   getProductHandler,
   createProductHandler,
   deleteProductHandler,
-  // updateProductHandler,
+  updateProductHandler,
   getProductByCodeHandler,
 } = require("./products_controllers");
 
