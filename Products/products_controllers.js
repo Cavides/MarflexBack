@@ -1,6 +1,6 @@
 const {
     createProduct,
-    // updateProduct,
+    updateProduct,
     deleteProduct,
     getProduct,
     getAllProducts,
