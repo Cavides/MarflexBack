@@ -76,7 +76,7 @@ async function updateUserHandler(req, res) {
 
   try {
     await updateUser(id, userUpdate);
-    const user = await findUserByEmail(email);
+    const user = await getUserByEmail(email);
     console.log("User id:", id, "Data updated:", userUpdate);
     return res
       .status(200)
