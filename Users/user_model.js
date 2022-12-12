@@ -19,7 +19,7 @@ const userSchema = new Schema(
     avatar: {
       type: String,
       default:
-        "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1665526729/imagenes/monki-monkey_kixf6d.gif",
+        "https://res.cloudinary.com/ds9rxxr5l/image/upload/v1670819061/imagenes/person-circle_hnumte.svg",
     },
 
     email: {
