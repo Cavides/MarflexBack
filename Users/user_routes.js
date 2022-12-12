@@ -25,6 +25,6 @@ router.get('/email/:email', getUserByEmailHandler);
 
 router.patch("/", userUpdateValidation, isAuthenticated, updateUserHandler);
 
-router.delete("/:id", isAuthenticated, deleteUserHandler);
+router.delete("/", isAuthenticated, deleteUserHandler);
 
 module.exports = router;
