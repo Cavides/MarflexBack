@@ -48,11 +48,6 @@ async function changePasswordHandler(req, res) {
 
 async function resetPasswordHandler(req, res) {
   const { email } = req.user;
-  console.log(
-    '🚀 ~ file: local.controller.js ~ line 51 ~ resetPasswordHandler ~ email',
-    email
-  );
-
   try {
     const user = await getUserByEmail(email);
     if (!user) {
